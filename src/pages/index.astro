@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SkillCard from '../components/SkillCard.vue';
+import ContactForm from '../components/ContactForm.vue';
+---
+
+<Layout title="Inicio">
+  <!-- Hero Section - Moderno y limpio -->
+  <section id="inicio" class="min-h-screen flex items-center justify-center pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 glass-card rounded-full px-4 py-1.5 mb-6">
+          <span class="w-2 h-2 bg-success rounded-full animate-pulse"></span>
+          <span class="text-xs text-text-tertiary">Disponible para trabajar</span>
+        </div>
+        
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-display font-bold mb-6">
+          <span class="text-text-primary">Hola, soy </span>
+          <span class="gradient-text">SamuDev</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-text-tertiary max-w-2xl mx-auto mb-8">
+          Desarrollador Full Stack especializado en aplicaciones web modernas 
+          y experiencias inmersivas en Roblox Studio.
+        </p>
+        
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href="#contacto" class="btn-primary">
+            Trabajemos juntos
+          </a>
+          <a href="#habilidades" class="btn-secondary">
+            Ver habilidades
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Mí Section -->
+  <section id="sobre-mi" class="py-24 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary text-sm font-semibold uppercase tracking-wide">Sobre mí</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-text-primary mt-2 mb-4">
+          Conoce al <span class="gradient-text">desarrollador</span>
+        </h2>
+        <div class="w-16 h-0.5 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-5">
+          <p class="text-text-secondary leading-relaxed">
+            Soy un desarrollador apasionado con <span class="text-primary font-semibold">+4 años de experiencia</span> 
+            creando soluciones digitales que combinan diseño funcional con código de calidad.
+          </p>
+          
+          <p class="text-text-secondary leading-relaxed">
+            Mi enfoque se centra en construir aplicaciones <span class="text-primary">rápidas, escalables y con excelente UX</span>. 
+            Desde el frontend moderno con Astro y Vue hasta el backend con Python.
+          </p>
+          
+          <p class="text-text-secondary leading-relaxed">
+            También desarrollo experiencias en Roblox Studio, creando sistemas complejos en Lua.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="bg-bg-card rounded-xl p-4 text-center border border-border">
+              <div class="text-2xl font-bold gradient-text">30+</div>
+              <div class="text-xs text-text-tertiary">Proyectos</div>
+            </div>
+            <div class="bg-bg-card rounded-xl p-4 text-center border border-border">
+              <div class="text-2xl font-bold gradient-text">100%</div>
+              <div class="text-xs text-text-tertiary">Satisfacción</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="bg-bg-card rounded-xl p-6 border border-border">
+            <h3 class="font-semibold text-text-primary mb-4">✨ ¿Qué me hace diferente?</h3>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 mt-0.5 text-primary">✓</div>
+                <p class="text-sm text-text-secondary">Código limpio y documentado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Section -->
+  <section id="habilidades" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary text-sm font-semibold uppercase tracking-wide">Habilidades</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-text-primary mt-2 mb-4">
+          Tecnologías que <span class="gradient-text">domino</span>
+        </h2>
+        <div class="w-16 h-0.5 bg-primary mx-auto"></div>
+      </div>
+      
+      <SkillCard client:load />
+    </div>
+  </section>
+
+  <!-- Contacto Section -->
+  <section id="contacto" class="py-24 bg-bg-secondary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary text-sm font-semibold uppercase tracking-wide">Contacto</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-text-primary mt-2 mb-4">
+          ¿Hablamos de tu <span class="gradient-text">proyecto</span>?
+        </h2>
+        <div class="w-16 h-0.5 bg-primary mx-auto"></div>
+        <p class="text-text-tertiary mt-4 max-w-2xl mx-auto">
+          Estoy a un mensaje de distancia. Cuéntame tu idea y juntos la haremos realidad.
+        </p>
+      </div>
+      
+      <ContactForm client:load />
+    </div>
+  </section>
+</section>
+</Layout>
